@@ -15,7 +15,7 @@ router.post("/notes", async (req, res) => {
 
 router.get("/notes", async (req, res) => {
   try{
-    const notes = await Note.findOne();
+    const notes = await Note.find();
     res.status(200).json(notes);
   }
   catch(error){
